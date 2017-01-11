@@ -110,18 +110,18 @@
 
         private void ReorderScc(List<int>[] scc)
         {
-            // Order with the second DFS (transposed)
+            // Order with second DFS (transposed)
             // Max from out time in each scc
 
             var maxTimeScc = new int[scc.Length];
 
             for (int sccId = 0; sccId < scc.Length; sccId++)
             {
-                maxTimeScc[sccId] = int.MaxValue;
+                maxTimeScc[sccId] = int.MinValue;
 
                 foreach (var vertice in scc[sccId])
                 {
-                    maxTimeScc[sccId] = Math.Min(maxTimeScc[sccId], _dfsTransposed.OutTime[vertice]);
+                    maxTimeScc[sccId] = Math.Max(maxTimeScc[sccId], _dfsTransposed.OutTime[vertice]);
                 }
             }
 

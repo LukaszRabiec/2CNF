@@ -6,7 +6,7 @@
     class Program
     {
         private static readonly string _catalogPath = AppDomain.CurrentDomain.BaseDirectory + @"Data\";
-        private static readonly string _expressionPath = _catalogPath + @"Example1.txt";
+        private static readonly string _expressionPath = _catalogPath + @"Example5.txt";
 
         static void Main(string[] args)
         {
