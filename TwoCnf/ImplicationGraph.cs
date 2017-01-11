@@ -53,7 +53,7 @@
                 var p = disjunction.Item1.Contains("-") ? -convertedItem1 + IndexesAmount : convertedItem1;
                 var q = disjunction.Item2.Contains("-") ? -convertedItem2 + IndexesAmount : convertedItem2;
 
-                // ( p | q ) => ( !p -> q ) & ( !p -> q )
+                // ( p | q ) => ( !p -> q ) & ( !q -> p )
                 var pNeg = p < IndexesAmount ? p + IndexesAmount : p - IndexesAmount;
                 var qNeg = q < IndexesAmount ? q + IndexesAmount : q - IndexesAmount;
 
